@@ -1,7 +1,5 @@
 <?php
 
-
-
 function connect($dbhost = "pr355810.mysql.tools",$user = "pr355810_andrii",
                  $password = "52Y3ne~aH-", $db = "pr355810_andrii"){
 
