@@ -1,4 +1,6 @@
 <?php
+session_start();
+header('location: register_form.php');
 include "connection.php";
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -15,4 +17,3 @@ else{
     echo "registration successful";
 }
 close($conn);
-?>
