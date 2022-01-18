@@ -16,6 +16,7 @@
         <input name='date' class="form-control" type="date" placeholder="Enter birth date"><br>
         <input type="submit" class="btn btn-success" value="add"><br>
     </form>
+    <a href="sign_in_form.php">Have an account ? Sing in </a>
 </div>
 
 
