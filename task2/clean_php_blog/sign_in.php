@@ -16,4 +16,11 @@ if( mysqli_num_rows($search)==1){
 else{
     header('location: register_form.php');
 }
+
+if ($_SERVER['REQUEST_METHOD']== 'POST')
+{
+    $username = $_POST['username'];
+
+}
+
 close($conn);
