@@ -3,7 +3,7 @@
 
 session_start();
 
-echo "admin page";
+echo "admin page"."<br>";
 
 ?>
 <html>
@@ -17,8 +17,9 @@ echo "admin page";
         </style>
     </head>
     <body>
-        <a href="logout.php">Log out</a>
+        <a href="logout.php">Log out</a><br>
         <a href="create_post_form.php">Create post</a><br>
+        <a href="delete_post_form.php">Delete post</a><br>
     </body>
 </html>
 
