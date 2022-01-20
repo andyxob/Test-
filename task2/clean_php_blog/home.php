@@ -1,15 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header('location:sign_in_form.php');
+    header('location:forms/sign_in_form.php');
 }
-else{
-    if ($_SESSION['is_admin'] ==0){
-        echo "this is common user";
-    }
-    else{
-        echo "this is admin";
-    }
+if($_SESSION['is_admin'] === 1){
+    header('location: admin_page.php');
 }
 ?>
 

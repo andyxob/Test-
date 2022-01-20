@@ -20,6 +20,7 @@ echo "admin page"."<br>";
         <a href="scripts/logout.php">Log out</a><br>
         <a href="forms/create_post_form.php">Create post</a><br>
         <a href="forms/delete_post_form.php">Delete post</a><br>
+        <a href="home.php">View blog</a>
     </body>
 </html>
 
