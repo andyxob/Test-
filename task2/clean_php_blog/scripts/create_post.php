@@ -1,6 +1,6 @@
 <?php
 
-include ('connection.php');
+include('../connection.php');
 session_start();
 $title = $_POST['title'];
 $description = $_POST['description'];
@@ -11,4 +11,4 @@ $conn = connect();
 
 mysqli_query($conn, "Insert into `posts`(`title`,`description`, `created_by_user`) values ('$title', '$description', '$created_by')");
 
-header('location:admin_page.php');
+header('location:../admin_page.php');

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "connection.php";
+include "../connection.php";
 $name = $_POST['name'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];
@@ -11,10 +11,10 @@ $search = mysqli_query($conn,"select * from `users` where `name` = '$name' && pa
 
 if( mysqli_num_rows($search)==1){
     $_SESSION['username'] = $name;
-    header('location: home.php');
+    header('location: ../home.php');
 }
 else{
-    header('location: register_form.php');
+    header('location: ../forms/register_form.php');
 }
 
 if ($_SERVER['REQUEST_METHOD']== 'POST')

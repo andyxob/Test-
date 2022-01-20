@@ -17,9 +17,9 @@ echo "admin page"."<br>";
         </style>
     </head>
     <body>
-        <a href="logout.php">Log out</a><br>
-        <a href="create_post_form.php">Create post</a><br>
-        <a href="delete_post_form.php">Delete post</a><br>
+        <a href="scripts/logout.php">Log out</a><br>
+        <a href="forms/create_post_form.php">Create post</a><br>
+        <a href="forms/delete_post_form.php">Delete post</a><br>
     </body>
 </html>
 

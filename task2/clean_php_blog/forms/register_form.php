@@ -9,7 +9,7 @@
     <h3>simple blog</h3>
 </header>
 <div class="container">
-    <form method="post" class="mt-5" action="valid.php">
+    <form method="post" class="mt-5" action="../scripts/valid.php">
         <input name='name' class="form-control" type="text" placeholder="Enter your name" required><br>
         <input name='email' class="form-control" type="email" placeholder="Enter email" required><br>
         <input name='pass' class="form-control" type="password" placeholder="Enter password" required><br>

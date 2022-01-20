@@ -9,7 +9,7 @@
     </header>
 
 <div class="container">
-    <form method="post" class="mt-5" action="sign_in.php">
+    <form method="post" class="mt-5" action="../scripts/sign_in.php">
 
         <input name='name' class="form-control" type="text" placeholder="Enter your name" required><br>
         <input name='pass' class="form-control" type="password" placeholder="Enter password" required><br>
