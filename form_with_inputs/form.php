@@ -16,12 +16,12 @@
         <input type="tel" name="tel" class="form-control" placeholder="enter phone nymber">
         <input type="time" name="time" class="form-control">
         <input type="image" src="Hello_kitty_png.png" width="50" height="50">
-        <input type="number">
+        <input type="number" name="number">
         <input type="url" name="url" placeholder="paste url">
         <input type="radio">
         <input type="datetime-local" name="datetime">
         <input type="reset">
-        <input type="file">
+        <input type="file" name="file">
         <input type="range" name="ran" list="rangelist" min="0" max="100" step="1" value="78" class="mt-3">
         <datalist id="rangelist">
             <option value="0"></option>
