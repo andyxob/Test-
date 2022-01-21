@@ -10,6 +10,7 @@ if(!isset($_SESSION['username'])){
 <title>Home page</title>
 </head>
 <body>
+
 <a href="scripts/logout.php">Log out</a>
 <h1>welcome <?php echo $_SESSION['username']?> </h1>
 </body>
