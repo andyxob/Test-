@@ -33,8 +33,6 @@ echo "admin page" . "<br>";
     <div class="links">
         <a href="scripts/logout.php">Log out</a>
         <a href="forms/create_post_form.php">Create post</a>
-        <a href="forms/delete_post_form.php">Delete post</a>
-        <a href="forms/delete_user_form.php">Delete user</a>
         <a href="home.php">View blog</a>
     </div>
 </header>
@@ -61,7 +59,10 @@ echo "admin page" . "<br>";
                 <tr>
                     <td><?php echo $row['title']; ?></td>
                     <td><?php echo $row['description']; ?></td>
-                    <td><a href="forms/update_post.php <?php echo $row['id'];?>" class>Edit </a></td>
+                    <td>
+                        <a href="forms/update_post.php?edit= " class="btn btn-info">Edit </a>
+                        <a href="scripts/delete_post.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
                 <?php
             }
@@ -87,6 +88,10 @@ echo "admin page" . "<br>";
                 <tr>
                     <td> <?php echo $row['name']; ?></td>
                     <td> <?php echo $row['email'] ?></td>
+                    <td>
+                        <a href="forms/update_post.php " class="btn btn-info">Edit </a>
+                        <a href="scripts/delete_user.php?delete=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
             <?php
             }

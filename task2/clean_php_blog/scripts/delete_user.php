@@ -1,10 +1,15 @@
 <?php
 include ('../connection.php');
+session_start();
+
 $conn = connect();
-$user = $_POST['user'];
 
-mysqli_query($conn, "Delete from `users` where `name` = '$user'");
 
-close($conn);
-header('location: ../admin_page.php');
+
+if(isset($_GET['delete'])){
+    $id = $_GET['delete'];
+    mysqli_query($conn, "Delete from `users` where `id` = '$id'");
+    close($conn);
+    header('location: ../admin_page.php');
+}
 ?>

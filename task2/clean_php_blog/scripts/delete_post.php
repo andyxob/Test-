@@ -1,10 +1,12 @@
 <?php
 include('../connection.php');
 $conn = connect();
-$title = $_POST['title'];
-mysqli_query($conn, "Delete from `posts` where `title` = '$title'");
 
-close($conn);
-header('location: ../admin_page.php');
+if(isset($_GET['delete'])){
+    $id = $_GET['delete'];
+    mysqli_query($conn, "Delete from `posts` where `id` = '$id'");
+    close($conn);
+    header('location: ../admin_page.php');
+}
 
 ?>
