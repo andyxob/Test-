@@ -1,14 +1,20 @@
 <?php
-
-include('../connection.php');
 session_start();
+include('../connection.php');
+
 $title = $_POST['title'];
 $description = $_POST['description'];
-$created_by = $_SESSION['username'];
+if(isset($_SESSION['username'])){
+    $created_by = $_SESSION['id'];
+}else {
+    header('location:../forms/sign_in_form.php');
+}
+
 
 
 $conn = connect();
 
 mysqli_query($conn, "Insert into `posts`(`title`,`description`, `created_by_user`) values ('$title', '$description', '$created_by')");
-
 header('location:../admin_page.php');
+
+########################### Completed

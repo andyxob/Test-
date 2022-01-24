@@ -1,7 +1,7 @@
 <?php
 session_start();
-header('location: register_form.php');
-include "connection.php";
+header('location: ../forms/register_form.php');
+include ("../connection.php");
 $name = $_POST['name'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];

@@ -12,4 +12,8 @@ if(isset($_GET['delete'])){
     close($conn);
     header('location: ../admin_page.php');
 }
+
+
+
+################################## Completed
 ?>

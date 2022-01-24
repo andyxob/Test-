@@ -4,8 +4,6 @@ echo "admin page" . "<br>";
 
 
 ?>
-
-
 <html>
 <head>
     <link rel="stylesheet" type="text/css"
@@ -31,18 +29,7 @@ echo "admin page" . "<br>";
     </style>
 </head>
 <body>
-<?php
-if(isset($_SESSION['message'])){
-?>
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">
-        <?php
-        echo $_SESSION['message'];
-        unset($_SESSION['message']);
-        ?>
-    </div>
-<?php
-}
-?>
+
 <header>
     <div class="links">
         <a href="scripts/logout.php">Log out</a>
@@ -74,7 +61,7 @@ if(isset($_SESSION['message'])){
                     <td><?php echo $row['title']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td>
-                        <a href="forms/update_post_form.php?edit= " class="btn btn-info">Edit </a>
+                        <a href="forms/update_post_form.php?edit=<?php echo $row['id']; ?> " class="btn btn-info">Edit </a>
                         <a href="scripts/delete_post.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
@@ -103,7 +90,7 @@ if(isset($_SESSION['message'])){
                     <td> <?php echo $row['name']; ?></td>
                     <td> <?php echo $row['email'] ?></td>
                     <td>
-                        <!--<a href="forms/update_post_form.php?edit=<?php echo $row['id']; ?> " class="btn btn-info">Edit </a>-->
+                       <a href="forms/update_post_form.php?edit=<?php echo $row['id']; ?> " class="btn btn-info">Edit </a>
                         <a href="scripts/delete_user.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
