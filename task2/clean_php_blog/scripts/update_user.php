@@ -33,5 +33,3 @@ if(isset($_POST['update'])){
     header('location: ../admin_page.php');
 }
 close($conn);
-
-?>
