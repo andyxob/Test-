@@ -1,6 +1,6 @@
 <?php
 echo "update user";
-include_once ("../connection.php");
+include ("../connection.php");
 
 $conn = connect();
 $id = 0;
@@ -28,7 +28,7 @@ if(isset($_POST['update'])){
     $password = $_POST['password'];
     $date = $_POST['date'];
 
-    $result = mysqli_query($conn, "update users set name='$name', email='$email', password = '$password', date = '$date', where  id = '$id'");
+    $result = mysqli_query($conn, "update users set name='$name', email='$email', password='$password', date='$date' where  id = '$id'");
 
     header('location: ../admin_page.php');
 }
