@@ -90,7 +90,7 @@ echo "admin page" . "<br>";
                     <td> <?php echo $row['name']; ?></td>
                     <td> <?php echo $row['email'] ?></td>
                     <td>
-                       <a href="scripts/update_user.php?edit=<?php echo $row['id']; ?> " class="btn btn-info">Edit </a>
+                       <a href="forms/update_user_form.php?edit=<?php echo $row['id']; ?> " class="btn btn-info">Edit </a>
                         <a href="scripts/delete_user.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
