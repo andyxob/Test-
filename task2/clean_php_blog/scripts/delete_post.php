@@ -1,5 +1,8 @@
 <?php
 include('../connection.php');
+include ('logs/control.php');
+session_start();
+
 $conn = connect();
 
 if(isset($_GET['delete'])){
@@ -10,5 +13,8 @@ if(isset($_GET['delete'])){
     close($conn);
     header('location: ../admin_page.php');
 }
+Logger::$PATH = dirname('logs');
+
+$logger = Logger::getLogger('logs')->log($_SESSION['username']." deleted a post");
 
 ############################## Completed

@@ -1,6 +1,7 @@
 <?php
 include("../connection.php");
-
+include ("logs/control.php");
+session_start();
 $conn = connect();
 $id = 0;
 $title= "";
@@ -25,3 +26,8 @@ if(isset($_POST['update'])){
     header('location: ../admin_page.php');
 }
 close($conn);
+
+Logger::$PATH = dirname('logs');
+$name = date('D M d H:i:s Y', time());
+
+$logger = Logger::getLogger('logs')->log( $_SESSION['username'].' edited a post');
