@@ -1,7 +1,7 @@
 <?php
 session_start();
 echo "admin page" . "<br>";
-
+include ('scripts/logs/control.php');
 
 ?>
 <html>
@@ -44,6 +44,7 @@ echo "admin page" . "<br>";
         <table class="table">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th colspan="2">Action</th>
@@ -55,9 +56,16 @@ echo "admin page" . "<br>";
             include('connection.php');
             $conn = connect();
             $out = mysqli_query($conn, "Select * from `posts`");
+            $i = 0;
             while ($row = $out->fetch_assoc()) {
+                if(isset($_SESSION['username']))
+                {
+                    $i++;
+                }
+
                 ?>
                 <tr>
+                    <td><?php echo $i?></td>
                     <td><?php echo $row['title']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td>
@@ -100,6 +108,17 @@ echo "admin page" . "<br>";
             ?>
         </table>
     </div>
+
+
+
 </div>
+
+<?php
+    $filename = "scripts/logs.log";
+    $handle = fopen($filename , 'r');
+    $content = fread($handle , filesize($filename));
+    fclose($handle);
+?>
+
 </body>
 </html>
